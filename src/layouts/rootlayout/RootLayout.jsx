@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./rootLayout.css";
 import { ClerkProvider } from "@clerk/clerk-react";
+import { dark } from "@clerk/themes";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 import {
@@ -19,7 +20,12 @@ if (!PUBLISHABLE_KEY) {
 
 const RootLayout = () => {
     return (
-        <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+        <ClerkProvider
+            publishableKey={PUBLISHABLE_KEY}
+            appearance={{
+                baseTheme: dark,
+            }}
+        >
             <div className="rootlayout">
                 <header>
                     <Link to="/" className="logo">

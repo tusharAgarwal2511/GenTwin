@@ -4,10 +4,14 @@ import './signInPage.css'
 
 const SignInPage = () => {
   return (
-    <div className='signin'>
-      <SignIn path='/sign-in'/>
-    </div>
-  )
+      <div className="signin">
+          <SignIn
+              appearance={{ baseTheme: "light" }}
+              path="/sign-in"
+              signInUrl="/sign-up"
+          />
+      </div>
+  );
 }
 
 export default SignInPage
