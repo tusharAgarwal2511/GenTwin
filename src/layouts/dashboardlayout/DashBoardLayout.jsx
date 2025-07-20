@@ -1,6 +1,8 @@
 import { useAuth } from "@clerk/clerk-react";
 import React, { useEffect } from "react";
 import { Outlet, useNavigate, useNavigation } from "react-router-dom";
+import ChatList from "../../components/chatList/ChatList";
+import './dashboardLayout.css'
 
 const DashBoardLayout = () => {
 
@@ -16,8 +18,8 @@ const DashBoardLayout = () => {
     if(!isLoaded) return "Loading..."
     return (
         <div className="dashboardlayout">
-            <div className="menu">MENU</div>
-            <div className="contact">
+            <div className="menu"><ChatList/></div>
+            <div className="content">
                 <Outlet />
             </div>
         </div>

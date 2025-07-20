@@ -6,9 +6,9 @@ const SignInPage = () => {
   return (
       <div className="signin">
           <SignIn
-              appearance={{ baseTheme: "light" }}
               path="/sign-in"
               signInUrl="/sign-up"
+              forceRedirectUrl="/dashboard"
           />
       </div>
   );

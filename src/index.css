@@ -5,13 +5,13 @@
 
 }
 
-html, body, #root {
+/* html, body, #root {
   height: auto;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
   background-color: #0c0c16;
-}
+} */
 
 body{
     background-color: #0c0c16;
